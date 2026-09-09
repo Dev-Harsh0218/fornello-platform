@@ -1,4 +1,4 @@
-# Karmic Kuisine
+# Fornello
 
 **Full-stack food ordering platform** — pizza restaurant with a public-facing marketing site and a server-rendered ordering flow. Two components in two repos: a Next.js marketing site, and a Node.js + Express + MongoDB backend that serves the menu, handles auth, checkout, and pushes real-time order updates over Socket.io.
 
@@ -8,7 +8,7 @@
 
 ```
                               ┌───────────────────────────────────────┐
-                              │   Marketing (karmic-kuisine-web)      │
+                              │   Marketing (fornello-web)      │
                               │  Next.js 16 + React 19 + Tailwind v4  │
                               │                                        │
                               │  Hero / Signature Dishes / Our Story  │
@@ -19,7 +19,7 @@
                                                │  "Order Now" → /menu
                                                ▼
                               ┌───────────────────────────────────────┐
-                              │    Ordering App (karmic-kuisine)      │
+                              │    Ordering App (fornello)      │
                               │  Node.js + Express + EJS (SSR)        │
                               │                                        │
                               │  - Menu / Cart / Checkout             │
@@ -45,13 +45,13 @@
 
 | Repo | Purpose | Tech |
 |---|---|---|
-| [**`karmic-kuisine-web`**](https://github.com/Dev-Harsh0218/karmic-kuisine-web) | Public marketing site — hero, signature dishes, story, reserve-a-table CTA. Deploys to Vercel. | Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind v4, Framer Motion, lucide-react |
-| [**`karmic-kuisine`**](https://github.com/Dev-Harsh0218/karmic-kuisine) | The ordering app itself — server-rendered menu, cart, checkout, order tracking, admin dashboard. | Node.js, Express 4, EJS, MongoDB (Mongoose 8), Passport, connect-mongo (session store), Socket.io, bcrypt, Laravel Mix |
+| [**`fornello-web`**](https://github.com/Dev-Harsh0218/fornello-web) | Public marketing site — hero, signature dishes, story, reserve-a-table CTA. Deploys to Vercel. | Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind v4, Framer Motion, lucide-react |
+| [**`fornello`**](https://github.com/Dev-Harsh0218/fornello) | The ordering app itself — server-rendered menu, cart, checkout, order tracking, admin dashboard. | Node.js, Express 4, EJS, MongoDB (Mongoose 8), Passport, connect-mongo (session store), Socket.io, bcrypt, Laravel Mix |
 
 ## The flow
 
-1. Customer lands on **karmic-kuisine-web** (marketing site) → clicks **Order Now**
-2. Redirected to **karmic-kuisine** (`/menu`) → browses dishes served from MongoDB
+1. Customer lands on **fornello-web** (marketing site) → clicks **Order Now**
+2. Redirected to **fornello** (`/menu`) → browses dishes served from MongoDB
 3. Adds items to cart → cart stored in Mongo-backed session (survives restart)
 4. Registers / logs in via Passport local strategy → bcrypt-hashed password
 5. `POST /orders` → order written to Mongo, tied to user, redirect to `/orders/:id`
@@ -80,8 +80,8 @@
 ## Build status
 
 - ✅ **Platform meta-repo** (this repo)
-- ✅ **karmic-kuisine** — ordering app is complete: menu, cart, register/login, order placement, admin dashboard, Socket.io order tracking. History cleaned (secrets purged, junk files removed), proper README + .env.example + .gitignore added.
-- 🟡 **karmic-kuisine-web** — Next.js marketing site (in progress)
+- ✅ **fornello** — ordering app is complete: menu, cart, register/login, order placement, admin dashboard, Socket.io order tracking. History cleaned (secrets purged, junk files removed), proper README + .env.example + .gitignore added.
+- 🟡 **fornello-web** — Next.js marketing site (in progress)
 
 ## Related
 
