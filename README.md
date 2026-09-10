@@ -74,14 +74,14 @@
 
 | Component | URL | Status |
 |---|---|---|
-| Marketing (web) | _pending deploy_ | Building |
+| Marketing (web) | [fornello-web.vercel.app](https://fornello-web.vercel.app) | Live |
 | Ordering app | _localhost only_ | Runs cleanly locally; deploy target TBD (Render / Railway / Fly.io — needs Mongo Atlas) |
 
 ## Build status
 
 - ✅ **Platform meta-repo** (this repo)
 - ✅ **fornello** — ordering app is complete: menu, cart, register/login, order placement, admin dashboard, Socket.io order tracking. History cleaned (secrets purged, junk files removed), proper README + .env.example + .gitignore added.
-- 🟡 **fornello-web** — Next.js marketing site (in progress)
+- ✅ **fornello-web** — Next.js marketing site live at [fornello-web.vercel.app](https://fornello-web.vercel.app)
 
 ## Related
 
